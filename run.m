@@ -9,7 +9,8 @@ agents = [
     addAgent('1', [-5 -5], [0 0], [5 5]),
     addAgent('2', [5 5],   [0 0], [-5 -5]),
     addAgent('3', [-5 5],  [0 0], [5 -5]),
-    addAgent('4', [5 -5],  [0 0], [-5 5])
+    addAgent('4', [5 -5],  [0 0], [-5 5]),
+    addAgent('5', [0 -2.5], [0 5], [0 5])
 ];
 axisLimits = [-6 6 -6 6]; % [xmin xmax ymin ymax] axis limits of the plot
 dt = 0.1;
@@ -48,7 +49,7 @@ while counter < maxIterations
     % Plot the current simulation step
     % Usage: plotSimulation(agents, counter, dt, axisLimits, true) -> Save the outputs to disk
     %        plotSimulation(agents, counter, dt, axisLimits, false) -> Don't save the outputs to disk
-    plotSimulation(agents, counter, dt, axisLimits, true);
+    plotSimulation(agents, counter, dt, axisLimits, false);
 
     counter = counter + 1;
 
